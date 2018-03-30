@@ -167,7 +167,6 @@ get '/remake_questions_table' do
   authorizer.fetch_access_token!
   s_service = Google::Apis::SheetsV4::SheetsService.new
   s_service.authorization = authorizer
-  
   User.all.each do |user|
     for num in 3..23
       num = num.to_s
