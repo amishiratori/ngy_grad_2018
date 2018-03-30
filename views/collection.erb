@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <title>名古屋卒業メンタークイズ2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="./stylesheets/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="user__container">
+        <h1>メッセージ動画</h1>
+        <div class="user__box">
+            <% @videos.each do |video| %>
+              <div class="user__items">
+                <p><%= video.author %></p>
+                <iframe src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allow="autoplay;"></iframe>
+              </div>
+            <% end %>
+        </div>
+        <div class="user__footer">
+            <a href="/user" class="square_btn">ホームに戻る</a><br>
+        </div>
+    </div>
+</body>
+</html>

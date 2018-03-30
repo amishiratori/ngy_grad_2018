@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <title>名古屋卒業メンタークイズ2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="../stylesheets/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="contents">
+                <h3><%= current_user.mentor_name %>クイズ</h3><br>
+                <p><%= @quiz.quiz %></p>
+                <form action="/quiz/check/<%= @quiz.id %>" method="post">
+                    <div class="radio msr_radio_04">
+                    <input type="radio" name="select_answer" value="1"><%= @quiz.choice1 %> <br>
+                    <input type="radio" name="select_answer" value="2"><%= @quiz.choice2 %> <br>
+                    <input type="radio" name="select_answer" value="3"><%= @quiz.choice3 %> <br>
+                    </div>
+                    <button type="submit"><i class="fas fa-chevron-circle-right"></i></button>
+                </form>
+                <a href="/user" class="square_btn">ホームにもどる</a>
+            </div>
+        </div>
+    </body>
+</html>
+

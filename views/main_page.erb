@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <title>名古屋卒業メンタークイズ2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="./stylesheets/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="contents">
+            <h1><%= @user.mentor_name %>のページ</h1>
+            <% if @user.clear == false %>
+                <a href="/start_quiz" class="square_btn">クイズ</a><br>
+            <% else %>
+                <a href="/clear" class="square_btn">クイズ一覧</a><br>
+            <% end %>
+            <br>
+            <a href="/collection" class="square_btn">動画コレクション</a>
+            <br>
+            <br>
+            <a href="/" class="square_btn">ログアウト</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'smartfont';
+    src: url('../smartfont.otf');
+}
+
+@font-face {
+    font-family: 'logotype';
+    src: url('../07LogoTypeGothic-Condense.ttf')
+}
+
+
+@media only screen and (min-width: 900px) {
+    body {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin:0;
+        padding:0;
+        font-family: 'logotype';
+        color: #ff7c5c;
+        /*background: linear-gradient(#F2B9A1, #EA6264);*/
+    }
+    
+    h3 {
+        margin: 30px;
+        font-size: 3vw;
+        position: relative;/*相対位置*/
+        line-height: 1.4;/*行高*/
+        display: inline-block;
+    }
+
+    h3:before,h3:after{ 
+        position: relative;
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        font-size: 1.0em;
+        color: #ff7c5c;
+    }
+    
+    h3:before{
+        content:"\f053";/*アイコン種類*/
+        padding-right: 0.5em
+    }
+    
+    h3:after{
+        content:"\f054";/*アイコン種類*/
+        padding-left: 0.5em
+    }
+    
+    button {
+        color: #ff7c5c;
+    }
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contents p {
+        font-size: 1.5vw;
+    }
+    
+    .contents img {
+        width: 300px;
+    }
+    
+    
+    .textfield {
+        padding-bottom: 20px;
+        width: 460px;
+    }
+    
+    .square_btn{
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #f7f7f7;
+        border-left: solid 6px #ff7c5c;/*左線*/
+        color: #ff7c5c;/*文字色*/
+        /*font-weight: bold;*/
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    }
+    
+    .square_btn:active {
+        box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+        transform: translateY(2px);
+    }
+    
+    .radio {
+        width: 100%;
+        text-align: left;
+        line-height: 1.5rem;
+        margin: auto;
+    }
+    
+    form {
+        font-size: 1.5vw;
+        padding: 5%;
+    }
+    
+    form input {
+        margin: 0 5%;
+    }
+    
+    button {
+        border: none;
+        background: transparent;
+        font-size: 3vw;
+        margin-top: 10%;
+    }
+    
+    button:hover {
+        opacity: 0.6;
+    }
+    
+    /* ------- collection ---------*/
+    .user__container {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .user__container h1 {
+        margin: auto;
+        margin-top: 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ff7c5c;
+        width: 245px;
+     }
+    
+    .user__box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .user__items {
+        width: 300px;
+        height: 200px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+     
+     .user__items p {
+        font-size: 1.5vw;
+        margin-bottom: 7px;
+     }
+     
+     .user__footer {
+         margin: 40px;
+     }
+     /* --------------------------*/
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        margin:0;
+        padding:0;
+        font-family: 'logotype';
+        color: #ff7c5c;
+        /*background: linear-gradient(#F2B9A1, #EA6264);*/
+    }
+
+    h3 {
+        font-size: 5vw;
+        position: relative;/*相対位置*/
+        line-height: 1.4;/*行高*/
+        display: inline-block;
+    }
+
+    h3:before,h3:after{ 
+        position: relative;
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        font-size: 1.0em;
+        color: #ff6a6a;
+    }
+    
+    h3:before{
+        content:"\f053";/*アイコン種類*/
+        padding-right: 0.5em
+    }
+    
+    h3:after{
+        content:"\f054";/*アイコン種類*/
+        padding-left: 0.5em
+    }
+    
+    button {
+        color: #ff7c5c;
+    }
+
+    .container {
+        width: 100%;
+        /*height: 100%;*/
+        text-align: center;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contents {
+        width:  90%;
+    }
+    
+    .contents p {
+        font-size: 4vw;
+    }
+    
+    .contents img {
+        width: 70%;
+    }
+    
+    .textfield {
+        padding-bottom: 20px;
+        width: 460px;
+    }
+    
+    .square_btn{
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #f7f7f7;
+        border-left: solid 6px #ff7c5c;/*左線*/
+        color: #ff7c5c;/*文字色*/
+        /*font-weight: bold;*/
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    }
+    
+    .square_btn:active {
+        box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+        transform: translateY(2px);
+    }
+    
+    .radio {
+        width: 100%;
+        text-align: left;
+        line-height: 1.5rem;
+        margin: auto;
+    }
+    
+    form {
+        font-size: 4vw;
+        padding: 5%;
+    }
+
+    form input {
+        margin: 0 3%;
+    }
+    
+    button {
+        border: none;
+        background: transparent;
+        font-size: 10vw;
+        margin-top: 10%;
+    }
+    
+     /* ------- collection ---------*/
+    .user__container {
+        width: 100%;
+        /*height: 100%;*/
+        text-align: center;
+        margin: auto;
+    }
+    
+    .user__container h1 {
+        margin: auto;
+        margin-top: 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ff7c5c;
+        width: 245px;
+     }
+    
+    .user__box {
+        text-align: center;
+    }
+     
+     .user__box p {
+        font-size: 4vw;
+        margin-bottom: 7px;
+     }
+     
+     /* --------------------------*/
+}
+
+
