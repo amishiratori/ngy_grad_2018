@@ -8,6 +8,21 @@
     src: url('../07LogoTypeGothic-Condense.ttf')
 }
 
+.sakura {
+ position: absolute;
+ height: 100vh;
+ width: 100%;
+ z-index: -1;
+}
+
+.bg {
+  position: absolute;
+  background-color: #EDFFE6;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -2;
+}
 
 @media only screen and (min-width: 900px) {
     body {
@@ -18,6 +33,7 @@
         padding:0;
         font-family: 'logotype';
         color: #ff7c5c;
+        background-color: #EDFFE6;
         /*background: linear-gradient(#F2B9A1, #EA6264);*/
     }
     
@@ -59,6 +75,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 5;
     }
     
     .contents p {
@@ -101,6 +118,7 @@
     form {
         font-size: 1.5vw;
         padding: 5%;
+        margin-top: 20px;
     }
     
     form input {
@@ -116,6 +134,20 @@
     
     button:hover {
         opacity: 0.6;
+    }
+    
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .small {
+        width: 400px;
+    }
+    
+    .textfield {
+        width: 330px;
     }
     
     /* ------- collection ---------*/
@@ -165,6 +197,7 @@
         padding:0;
         font-family: 'logotype';
         color: #ff7c5c;
+        background-color: #EDFFE6;
         /*background: linear-gradient(#F2B9A1, #EA6264);*/
     }
 
@@ -205,6 +238,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 100px;
+        z-index: 5;
     }
     
     .contents {
@@ -221,7 +256,7 @@
     
     .textfield {
         padding-bottom: 20px;
-        width: 460px;
+        width: 260px;
     }
     
     .square_btn{
@@ -250,6 +285,7 @@
     form {
         font-size: 4vw;
         padding: 5%;
+        margin-top: 20px;
     }
 
     form input {
@@ -261,6 +297,10 @@
         background: transparent;
         font-size: 10vw;
         margin-top: 10%;
+    }
+    
+    .top_m {
+        margin-top: 100px;
     }
     
      /* ------- collection ---------*/
@@ -288,6 +328,9 @@
         margin-bottom: 7px;
      }
      
+     .user__footer {
+         margin: 40px;
+     }
      /* --------------------------*/
 }
 

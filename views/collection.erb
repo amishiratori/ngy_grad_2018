@@ -11,11 +11,15 @@
     <div class="user__container">
         <h1>メッセージ動画</h1>
         <div class="user__box">
-            <% @videos.each do |video| %>
-              <div class="user__items">
-                <p><%= video.author %></p>
-                <iframe src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allow="autoplay;"></iframe>
-              </div>
+            <% if @videos.blank? %>
+                <p>クイズに挑戦しよう！</p>
+            <% else %>
+                <% @videos.each do |video| %>
+                  <div class="user__items">
+                    <p><%= video.author %></p>
+                    <iframe src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allow="autoplay;"></iframe>
+                  </div>
+                <% end %>
             <% end %>
         </div>
         <div class="user__footer">

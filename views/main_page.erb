@@ -6,11 +6,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link href="./stylesheets/style.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/main.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="bg"></div>
+    <div class="sakura" id="sakura"></div>
+    <div class="container top_m">
         <div class="contents">
-            <h1><%= @user.mentor_name %>のページ</h1>
+            <h2>卒業おめでとうございます！！</h2>
+            <h2><%= @user.mentor_name %>のページ</h2>
             <% if @user.clear == false %>
                 <a href="/start_quiz" class="square_btn">クイズ</a><br>
             <% else %>
@@ -18,10 +22,8 @@
             <% end %>
             <br>
             <a href="/collection" class="square_btn">動画コレクション</a>
-            <br>
-            <br>
-            <a href="/" class="square_btn">ログアウト</a>
         </div>
     </div>
+    <script src="/js/setting.js"></script>
 </body>
 </html>
