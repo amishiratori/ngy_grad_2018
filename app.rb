@@ -160,13 +160,11 @@ end
 
 get '/remake_questions_table' do
   credential_file = './MyProject-e3ddd3ab5bd6.json'
-  
   authorizer = Google::Auth::ServiceAccountCredentials.make_creds(
       json_key_io: File.open(credential_file),
       scope: Google::Apis::SheetsV4::AUTH_SPREADSHEETS
   )  
   authorizer.fetch_access_token!
-  
   s_service = Google::Apis::SheetsV4::SheetsService.new
   s_service.authorization = authorizer
   
