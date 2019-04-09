@@ -101,27 +101,7 @@ post '/quiz/check/:id' do
       number = questions[rand(questions.length)].id
       redirect  "/quiz/#{number}"
   end
-  
-  #質問のclearフラグにfalseがない時
-  # if current_user.questions.where(clear: false).blank?
-  # if current_user.score == current_user.videos.length
-  #     current_user.update({
-  #       clear: true
-  #     })
-  #     redirect '/clear'
-  # end
-  # if current_user.score == (current_user.questions.length / current_user.videos.length)
-  #     current_user.update ({
-  #     #   score: 1
-  #     })
-  #     index = current_user.videos.where(played: false)
-  #     number = index[rand(index.length)].id
-  #     redirect  "/video/#{number}"
-  # else
-  #     questions = current_user.questions.where(clear: false)
-  #     number = questions[rand(questions.length)].id
-  #     redirect  "/quiz/#{number}"
-  # end
+
 end
 
 get '/video/:id' do
@@ -170,7 +150,7 @@ get '/remake_questions_table' do
   User.all.each do |user|
     for num in 3..23
       num = num.to_s
-      data = s_service.batch_get_spreadsheet_values('1l2OC4jWJRjVDF9lpGdb4LAtuTLQTWsNQvr2PwjWhU8M', ranges: user.mentor_name + '!C' + num + ':H' + num).value_ranges.first.values
+      data = s_service.batch_get_spreadsheet_values(ENV['SPREADSHEET_ID'], ranges: user.mentor_name + '!C' + num + ':H' + num).value_ranges.first.values
       unless data.blank?  
         user.questions.create(
           author: data[0][0],
@@ -200,7 +180,7 @@ get '/remake_videos_table' do
   
     for num in 2..23
       num = num.to_s
-      data = s_service.batch_get_spreadsheet_values('1l2OC4jWJRjVDF9lpGdb4LAtuTLQTWsNQvr2PwjWhU8M', ranges: '動画リンク集!A' + num + ':G' + num).value_ranges.first.values
+      data = s_service.batch_get_spreadsheet_values(ENV['SPREADSHEET_ID'], ranges: '動画リンク集!A' + num + ':G' + num).value_ranges.first.values
       # しがしが
       unless data[0][1].blank?  
         User.find_by(id: 1).videos.create(
